@@ -17,3 +17,24 @@ if (email === mailLogged[0] || email === mailLogged[1] || email === mailLogged[2
 }
 
 // DADI
+
+var min = 1;
+var max = 6;
+var dadoUtente = Math.floor(Math.random() * (max + 1 - min) + min)
+console.log('il numero uscito dal dado di ' + email + ' è ' + dadoUtente)
+
+var min = 1;
+var max = 6;
+var dadoPc = Math.floor(Math.random() * (max + 1 - min) + min)
+console.log('il numero uscito dal dado di ' + email + ' è ' + dadoPc)
+
+if (dadoUtente > dadoPc) {
+  var vittoria = document.getElementById('risultato');
+  vittoria.innerText = 'Hai vinto'
+} else if (dadoUtente === dadoPc) {
+  var pareggio = document.getElementById('risultato');
+  pareggio.innerText = 'Hai pareggiato'
+}else {
+  var sconfitta = document.getElementById('risultato');
+  sconfitta.innerText = 'Hai perso'
+}
